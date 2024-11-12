@@ -209,7 +209,7 @@ class _MonthPickerState extends State<_MonthPicker> {
         ),
         Expanded(
           child: GridView.builder(
-            controller: _scrollController,
+            // controller: _scrollController,
             gridDelegate: _monthPickerGridDelegate,
             itemBuilder: _buildMonthItem,
             itemCount: 12,
