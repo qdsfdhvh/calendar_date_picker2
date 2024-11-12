@@ -165,15 +165,7 @@ class _CalendarViewState extends State<_CalendarView> {
   /// Navigate to the given month.
   void _showMonth(DateTime month, {bool jump = false}) {
     final int monthPage = DateUtils.monthDelta(widget.config.firstDate, month);
-    if (jump) {
-      _pageController.jumpToPage(monthPage);
-    } else {
-      _pageController.animateToPage(
-        monthPage,
-        duration: _monthScrollDuration,
-        curve: Curves.ease,
-      );
-    }
+    _pageController.jumpToPage(monthPage);
   }
 
   /// True if the earliest allowable month is displayed.
