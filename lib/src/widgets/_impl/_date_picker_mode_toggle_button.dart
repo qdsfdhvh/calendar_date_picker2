@@ -158,12 +158,11 @@ class _DatePickerModeToggleButtonState
                     onTap: widget.config.disableModePicker == true
                         ? null
                         : widget.onYearPressed,
-                    child: widget.config.modePickerBuilder
-                            ?.call(
-                              monthDate: widget.monthDate,
-                              isMonthPicker: false,
-                              mode: widget.mode,
-                              ) ??
+                    child: widget.config.modePickerBuilder?.call(
+                          monthDate: widget.monthDate,
+                          isMonthPicker: false,
+                          mode: widget.mode,
+                        ) ??
                         Padding(
                           padding: EdgeInsets.symmetric(
                               horizontal: horizontalPadding),
@@ -266,12 +265,11 @@ class _DatePickerModeToggleButtonState
                         onTap: widget.config.disableModePicker == true
                             ? null
                             : widget.onYearPressed,
-                        child: widget.config.modePickerBuilder
-                                ?.call(
-                                  monthDate: widget.monthDate,
-                                  isMonthPicker: false,
-                                  mode: widget.mode,
-                                  ) ??
+                        child: widget.config.modePickerBuilder?.call(
+                              monthDate: widget.monthDate,
+                              isMonthPicker: false,
+                              mode: widget.mode,
+                            ) ??
                             Padding(
                               padding: EdgeInsets.symmetric(
                                   horizontal: horizontalPadding),

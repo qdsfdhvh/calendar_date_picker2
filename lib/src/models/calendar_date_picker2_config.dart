@@ -42,9 +42,9 @@ typedef DayBuilder = Widget? Function({
   required DateTime date,
   TextStyle? textStyle,
   BoxDecoration? decoration,
-  bool? isSelected,
-  bool? isDisabled,
-  bool? isToday,
+  required bool isSelected,
+  required bool isDisabled,
+  required bool isToday,
 });
 
 /// Custom builder for the year widget
@@ -52,9 +52,9 @@ typedef YearBuilder = Widget? Function({
   required int year,
   TextStyle? textStyle,
   BoxDecoration? decoration,
-  bool? isSelected,
-  bool? isDisabled,
-  bool? isCurrentYear,
+  required bool isSelected,
+  required bool isDisabled,
+  required bool isCurrentYear,
 });
 
 /// Custom builder for the month widget

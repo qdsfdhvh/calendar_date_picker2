@@ -192,9 +192,9 @@ class _MyHomePageState extends State<MyHomePage> {
         required date,
         textStyle,
         decoration,
-        isSelected,
-        isDisabled,
-        isToday,
+        required isSelected,
+        required isDisabled,
+        required isToday,
       }) {
         Widget? dayWidget;
         if (date.day % 3 == 0 && date.day % 9 != 0) {
@@ -230,11 +230,11 @@ class _MyHomePageState extends State<MyHomePage> {
       },
       yearBuilder: ({
         required year,
-        decoration,
-        isCurrentYear,
-        isDisabled,
-        isSelected,
         textStyle,
+        decoration,
+        required isSelected,
+        required isDisabled,
+        required isCurrentYear,
       }) {
         return Center(
           child: Container(
@@ -352,9 +352,9 @@ class _MyHomePageState extends State<MyHomePage> {
         required date,
         textStyle,
         decoration,
-        isSelected,
-        isDisabled,
-        isToday,
+        required isSelected,
+        required isDisabled,
+        required isToday,
       }) {
         Widget? dayWidget;
         if (date.day % 3 == 0 && date.day % 9 != 0) {
@@ -390,11 +390,11 @@ class _MyHomePageState extends State<MyHomePage> {
       },
       yearBuilder: ({
         required year,
-        decoration,
-        isCurrentYear,
-        isDisabled,
-        isSelected,
         textStyle,
+        decoration,
+        required isSelected,
+        required isDisabled,
+        required isCurrentYear,
       }) {
         return Center(
           child: Container(
@@ -733,7 +733,8 @@ class _MyHomePageState extends State<MyHomePage> {
         fontWeight: FontWeight.bold,
       ),
       dynamicCalendarRows: true,
-      modePickerBuilder: ({required monthDate, required isMonthPicker, required mode}) {
+      modePickerBuilder: (
+          {required monthDate, required isMonthPicker, required mode}) {
         return Center(
           child: Container(
             padding: const EdgeInsets.all(5),
