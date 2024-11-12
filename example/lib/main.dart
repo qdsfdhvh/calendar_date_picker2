@@ -492,6 +492,8 @@ class _MyHomePageState extends State<MyHomePage> {
       centerAlignModePicker: true,
       useAbbrLabelForMonthModePicker: true,
       modePickersGap: 0,
+      visiblePrevMonthIcon: false,
+      visibleNextMonthIcon: false,
       modePickerTextHandler: ({required monthDate, isMonthPicker}) {
         if (isMonthPicker ?? false) {
           // Custom month picker text
