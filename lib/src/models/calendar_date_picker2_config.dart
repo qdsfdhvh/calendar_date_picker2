@@ -62,9 +62,9 @@ typedef MonthBuilder = Widget? Function({
   required int month,
   TextStyle? textStyle,
   BoxDecoration? decoration,
-  bool? isSelected,
-  bool? isDisabled,
-  bool? isCurrentMonth,
+  required bool isSelected,
+  required bool isDisabled,
+  required bool isCurrentMonth,
 });
 
 /// Builder for the month and year in the scroll calendar view.
