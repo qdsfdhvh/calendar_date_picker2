@@ -331,11 +331,11 @@ class _CalendarViewState extends State<_CalendarView> {
             child: Row(
               children: <Widget>[
                 if (widget.config.centerAlignModePicker != true) const Spacer(),
-                IconButton(
+                widget.config.visiblePrevMonthIcon ? IconButton(
                   splashRadius: widget.config.dayMaxWidth != null
                       ? widget.config.dayMaxWidth! * 2 / 3
                       : null,
-                  icon: widget.config.lastMonthIcon ??
+                  icon: widget.config.prevMonthIcon ??
                       Icon(widget.config.dayModeScrollDirection == Axis.vertical
                           ? Icons.keyboard_arrow_up
                           : Icons.chevron_left),
@@ -345,9 +345,9 @@ class _CalendarViewState extends State<_CalendarView> {
                       : _localizations.previousMonthTooltip,
                   onPressed:
                       _isDisplayingFirstMonth ? null : _handlePreviousMonth,
-                ),
+                ) : const SizedBox.shrink(),
                 if (widget.config.centerAlignModePicker == true) const Spacer(),
-                IconButton(
+                widget.config.visibleNextMonthIcon ? IconButton(
                   splashRadius: widget.config.dayMaxWidth != null
                       ? widget.config.dayMaxWidth! * 2 / 3
                       : null,
@@ -360,7 +360,7 @@ class _CalendarViewState extends State<_CalendarView> {
                       ? null
                       : _localizations.nextMonthTooltip,
                   onPressed: _isDisplayingLastMonth ? null : _handleNextMonth,
-                ),
+                ) : const SizedBox.shrink(),
               ],
             ),
           ),

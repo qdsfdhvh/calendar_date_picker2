@@ -145,7 +145,7 @@ var results = await showCalendarDatePicker2Dialog(
 | weekdayLabelTextStyle            | TextStyle?                        | Custom text style for weekday labels                                                                          |
 | weekdayLabelBuilder              | WeekdayLabelBuilder?              | Function to provide full control over weekday label widget                                                    |
 | firstDayOfWeek                   | int?                              | Index of the first day of week, where 0 points to Sunday, and 6 points to Saturday.                           |
-| lastMonthIcon                    | Widget?                           | Custom icon for last month button control                                                                     |
+| prevMonthIcon                    | Widget?                           | Custom icon for last month button control                                                                     |
 | nextMonthIcon                    | Widget?                           | Custom icon for next month button control                                                                     |
 | controlsHeight                   | double?                           | Custom height for calendar control toggle's height                                                            |
 | controlsTextStyle                | TextStyle?                        | Custom text style for calendar mode toggle control                                                            |

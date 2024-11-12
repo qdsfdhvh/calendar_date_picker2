@@ -127,7 +127,7 @@ class CalendarDatePicker2Config {
     this.weekdayLabelBuilder,
     this.firstDayOfWeek,
     this.controlsHeight,
-    this.lastMonthIcon,
+    this.prevMonthIcon,
     this.nextMonthIcon,
     this.controlsTextStyle,
     this.animateToDisplayedMonthDate,
@@ -184,6 +184,8 @@ class CalendarDatePicker2Config {
     this.dayModeScrollDirection,
     this.selectedRangeHighlightBuilder,
     this.selectedRangeDecorationPredicate,
+    this.visiblePrevMonthIcon = true,
+    this.visibleNextMonthIcon = true,
   })  : calendarType = calendarType ?? CalendarDatePicker2Type.single,
         firstDate = DateUtils.dateOnly(firstDate ?? DateTime(1970)),
         lastDate =
@@ -227,7 +229,7 @@ class CalendarDatePicker2Config {
   final double? controlsHeight;
 
   /// Custom icon for last month button control
-  final Widget? lastMonthIcon;
+  final Widget? prevMonthIcon;
 
   /// Custom icon for next month button control
   final Widget? nextMonthIcon;
@@ -403,6 +405,12 @@ class CalendarDatePicker2Config {
   /// Predicate to determine the day widget box decoration for a day in selected range
   final SelectedRangeDecorationPredicate? selectedRangeDecorationPredicate;
 
+  /// Flag to show/hide previous month icon
+  final bool visiblePrevMonthIcon;
+
+  /// Flag to show/hide next month icon
+  final bool visibleNextMonthIcon;
+
   /// Copy the current [CalendarDatePicker2Config] with some new values
   CalendarDatePicker2Config copyWith({
     CalendarDatePicker2Type? calendarType,
@@ -415,7 +423,7 @@ class CalendarDatePicker2Config {
     WeekdayLabelBuilder? weekdayLabelBuilder,
     int? firstDayOfWeek,
     double? controlsHeight,
-    Widget? lastMonthIcon,
+    Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
     bool? animateToDisplayedMonthDate,
@@ -485,7 +493,7 @@ class CalendarDatePicker2Config {
       weekdayLabelBuilder: weekdayLabelBuilder ?? this.weekdayLabelBuilder,
       firstDayOfWeek: firstDayOfWeek ?? this.firstDayOfWeek,
       controlsHeight: controlsHeight ?? this.controlsHeight,
-      lastMonthIcon: lastMonthIcon ?? this.lastMonthIcon,
+      prevMonthIcon: prevMonthIcon ?? this.prevMonthIcon,
       nextMonthIcon: nextMonthIcon ?? this.nextMonthIcon,
       controlsTextStyle: controlsTextStyle ?? this.controlsTextStyle,
       animateToDisplayedMonthDate:
@@ -589,7 +597,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     WeekdayLabelBuilder? weekdayLabelBuilder,
     int? firstDayOfWeek,
     double? controlsHeight,
-    Widget? lastMonthIcon,
+    Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
     bool? animateToDisplayedMonthDate,
@@ -666,7 +674,7 @@ class CalendarDatePicker2WithActionButtonsConfig
           weekdayLabelBuilder: weekdayLabelBuilder,
           firstDayOfWeek: firstDayOfWeek,
           controlsHeight: controlsHeight,
-          lastMonthIcon: lastMonthIcon,
+          prevMonthIcon: prevMonthIcon,
           nextMonthIcon: nextMonthIcon,
           controlsTextStyle: controlsTextStyle,
           animateToDisplayedMonthDate: animateToDisplayedMonthDate,
@@ -764,7 +772,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     WeekdayLabelBuilder? weekdayLabelBuilder,
     int? firstDayOfWeek,
     double? controlsHeight,
-    Widget? lastMonthIcon,
+    Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
     bool? animateToDisplayedMonthDate,
@@ -843,7 +851,7 @@ class CalendarDatePicker2WithActionButtonsConfig
       weekdayLabelBuilder: weekdayLabelBuilder ?? this.weekdayLabelBuilder,
       firstDayOfWeek: firstDayOfWeek ?? this.firstDayOfWeek,
       controlsHeight: controlsHeight ?? this.controlsHeight,
-      lastMonthIcon: lastMonthIcon ?? this.lastMonthIcon,
+      prevMonthIcon: prevMonthIcon ?? this.prevMonthIcon,
       nextMonthIcon: nextMonthIcon ?? this.nextMonthIcon,
       controlsTextStyle: controlsTextStyle ?? this.controlsTextStyle,
       animateToDisplayedMonthDate:
