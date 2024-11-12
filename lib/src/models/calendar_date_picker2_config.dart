@@ -133,7 +133,6 @@ class CalendarDatePicker2Config {
     this.prevMonthIcon,
     this.nextMonthIcon,
     this.controlsTextStyle,
-    this.animateToDisplayedMonthDate,
     this.dayViewController,
     this.dayTextStyle,
     this.selectedDayTextStyle,
@@ -240,8 +239,6 @@ class CalendarDatePicker2Config {
   /// Custom text style for calendar mode toggle control
   final TextStyle? controlsTextStyle;
 
-  /// Flag to always animate to the displayedMonthDate
-  final bool? animateToDisplayedMonthDate;
 
   /// Custom page controller for the calendar day view mode
   final PageController? dayViewController;
@@ -429,7 +426,6 @@ class CalendarDatePicker2Config {
     Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
-    bool? animateToDisplayedMonthDate,
     PageController? dayViewController,
     TextStyle? dayTextStyle,
     TextStyle? selectedDayTextStyle,
@@ -499,8 +495,6 @@ class CalendarDatePicker2Config {
       prevMonthIcon: prevMonthIcon ?? this.prevMonthIcon,
       nextMonthIcon: nextMonthIcon ?? this.nextMonthIcon,
       controlsTextStyle: controlsTextStyle ?? this.controlsTextStyle,
-      animateToDisplayedMonthDate:
-          animateToDisplayedMonthDate ?? this.animateToDisplayedMonthDate,
       dayViewController: dayViewController ?? this.dayViewController,
       dayTextStyle: dayTextStyle ?? this.dayTextStyle,
       selectedDayTextStyle: selectedDayTextStyle ?? this.selectedDayTextStyle,
@@ -603,7 +597,6 @@ class CalendarDatePicker2WithActionButtonsConfig
     Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
-    bool? animateToDisplayedMonthDate,
     PageController? dayViewController,
     TextStyle? dayTextStyle,
     TextStyle? selectedDayTextStyle,
@@ -680,7 +673,6 @@ class CalendarDatePicker2WithActionButtonsConfig
           prevMonthIcon: prevMonthIcon,
           nextMonthIcon: nextMonthIcon,
           controlsTextStyle: controlsTextStyle,
-          animateToDisplayedMonthDate: animateToDisplayedMonthDate,
           dayViewController: dayViewController,
           dayTextStyle: dayTextStyle,
           selectedDayTextStyle: selectedDayTextStyle,
@@ -778,7 +770,6 @@ class CalendarDatePicker2WithActionButtonsConfig
     Widget? prevMonthIcon,
     Widget? nextMonthIcon,
     TextStyle? controlsTextStyle,
-    bool? animateToDisplayedMonthDate,
     PageController? dayViewController,
     TextStyle? dayTextStyle,
     TextStyle? selectedDayTextStyle,
@@ -857,8 +848,6 @@ class CalendarDatePicker2WithActionButtonsConfig
       prevMonthIcon: prevMonthIcon ?? this.prevMonthIcon,
       nextMonthIcon: nextMonthIcon ?? this.nextMonthIcon,
       controlsTextStyle: controlsTextStyle ?? this.controlsTextStyle,
-      animateToDisplayedMonthDate:
-          animateToDisplayedMonthDate ?? this.animateToDisplayedMonthDate,
       dayViewController: dayViewController ?? this.dayViewController,
       dayTextStyle: dayTextStyle ?? this.dayTextStyle,
       selectedDayTextStyle: selectedDayTextStyle ?? this.selectedDayTextStyle,

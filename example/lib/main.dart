@@ -476,7 +476,6 @@ class _MyHomePageState extends State<MyHomePage> {
       firstDayOfWeek: 1,
       controlsHeight: 50,
       dayMaxWidth: 25,
-      animateToDisplayedMonthDate: true,
       controlsTextStyle: const TextStyle(
         color: Colors.black,
         fontSize: 15,
