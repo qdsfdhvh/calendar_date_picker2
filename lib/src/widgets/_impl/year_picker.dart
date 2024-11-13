@@ -90,7 +90,7 @@ class _YearPickerState extends State<YearPicker> {
     final int offset = _itemCount < minYears ? (minYears - _itemCount) ~/ 2 : 0;
     final int year = widget.config.firstDate.year + index - offset;
     final bool isSelected = widget.selectedDates.any((d) => d?.year == year);
-    final bool isCurrentYear = year == widget.config.currentDate.year;
+    final bool isCurrentYear = year == widget.initialMonth.year;
     final yearSelectableFromPredicate =
         widget.config.selectableYearPredicate?.call(year) ?? true;
     final isDisabled = (year < widget.config.firstDate.year ||
