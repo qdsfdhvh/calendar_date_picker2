@@ -54,10 +54,11 @@ class _YearPickerState extends State<YearPicker> {
   @override
   void initState() {
     super.initState();
-    final scrollOffset =
-        widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
-            ? _scrollOffsetForYear(widget.selectedDates[0]!)
-            : _scrollOffsetForYear(DateUtils.dateOnly(DateTime.now()));
+    final scrollOffset = _scrollOffsetForYear(widget.initialMonth);
+    // final scrollOffset =
+    //     widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
+    //         ? _scrollOffsetForYear(widget.selectedDates[0]!)
+    //         : _scrollOffsetForYear(DateUtils.dateOnly(DateTime.now()));
     _scrollController = widget.config.yearViewController ??
         ScrollController(initialScrollOffset: scrollOffset);
   }
@@ -65,13 +66,13 @@ class _YearPickerState extends State<YearPicker> {
   @override
   void didUpdateWidget(YearPicker oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (widget.selectedDates != oldWidget.selectedDates) {
-      final scrollOffset =
-          widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
-              ? _scrollOffsetForYear(widget.selectedDates[0]!)
-              : _scrollOffsetForYear(DateUtils.dateOnly(DateTime.now()));
-      _scrollController.jumpTo(scrollOffset);
-    }
+    // if (widget.selectedDates != oldWidget.selectedDates) {
+    //   final scrollOffset =
+    //       widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
+    //           ? _scrollOffsetForYear(widget.selectedDates[0]!)
+    //           : _scrollOffsetForYear(DateUtils.dateOnly(DateTime.now()));
+    //   _scrollController.jumpTo(scrollOffset);
+    // }
   }
 
   double _scrollOffsetForYear(DateTime date) {
