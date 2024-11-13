@@ -39,30 +39,30 @@ class _MonthPicker extends StatefulWidget {
 }
 
 class _MonthPickerState extends State<_MonthPicker> {
-  late ScrollController _scrollController;
+  // late ScrollController _scrollController;
   late Locale _locale;
 
   @override
   void initState() {
     super.initState();
-    final scrollOffset =
-        widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
-            ? _scrollOffsetForMonth(widget.selectedDates[0]!)
-            : _scrollOffsetForMonth(DateUtils.dateOnly(DateTime.now()));
-    _scrollController = widget.config.monthViewController ??
-        ScrollController(initialScrollOffset: scrollOffset);
+    // final scrollOffset =
+    //     widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
+    //         ? _scrollOffsetForMonth(widget.selectedDates[0]!)
+    //         : _scrollOffsetForMonth(DateUtils.dateOnly(DateTime.now()));
+    // _scrollController = widget.config.monthViewController ??
+    //     ScrollController(initialScrollOffset: scrollOffset);
   }
 
   @override
   void didUpdateWidget(_MonthPicker oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (widget.selectedDates != oldWidget.selectedDates) {
-      final scrollOffset =
-          widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
-              ? _scrollOffsetForMonth(widget.selectedDates[0]!)
-              : _scrollOffsetForMonth(DateUtils.dateOnly(DateTime.now()));
-      _scrollController.jumpTo(scrollOffset);
-    }
+    // if (widget.selectedDates != oldWidget.selectedDates) {
+    //   final scrollOffset =
+    //       widget.selectedDates.isNotEmpty && widget.selectedDates[0] != null
+    //           ? _scrollOffsetForMonth(widget.selectedDates[0]!)
+    //           : _scrollOffsetForMonth(DateUtils.dateOnly(DateTime.now()));
+    //   _scrollController.jumpTo(scrollOffset);
+    // }
   }
 
   @override
@@ -72,12 +72,12 @@ class _MonthPickerState extends State<_MonthPicker> {
     _locale = Localizations.localeOf(context);
   }
 
-  double _scrollOffsetForMonth(DateTime date) {
-    final int initialMonthIndex = date.month - DateTime.january;
-    final int initialMonthRow = initialMonthIndex ~/ _monthPickerColumnCount;
-    final int centeredMonthRow = initialMonthRow - 2;
-    return centeredMonthRow * _monthPickerRowHeight;
-  }
+  // double _scrollOffsetForMonth(DateTime date) {
+  //   final int initialMonthIndex = date.month - DateTime.january;
+  //   final int initialMonthRow = initialMonthIndex ~/ _monthPickerColumnCount;
+  //   final int centeredMonthRow = initialMonthRow - 2;
+  //   return centeredMonthRow * _monthPickerRowHeight;
+  // }
 
   Widget _buildMonthItem(BuildContext context, int index) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;

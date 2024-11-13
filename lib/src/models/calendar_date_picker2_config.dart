@@ -239,7 +239,6 @@ class CalendarDatePicker2Config {
   /// Custom text style for calendar mode toggle control
   final TextStyle? controlsTextStyle;
 
-
   /// Custom page controller for the calendar day view mode
   final PageController? dayViewController;
 
